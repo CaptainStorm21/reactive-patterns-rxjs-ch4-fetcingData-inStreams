@@ -4,7 +4,21 @@
   You can also use structural directives to handle this
   [value]="recipes"
 -->
+
+<!--
+Using the async pipe in your template
+We will not subscribe manually; instead, we will use the async pipe.
+The async pipe makes rendering values emitted from the observable easier.
+First of all, it automatically subscribes to the input observable.
+Then, it returns the latest value emitted. And best of all, when the component
+has been destroyed, it automatically unsubscribes to avoid any potential memory
+leaks.
+This means there is no need to clean up any subscriptions when the component has been destroyed. And that's amazing. Whenever a new value is emitted, it marks the component to be checked for changes.
+So, in the template, we bind to an observable using the async pipe. Here, as recipes describes the array variable that the values are emitted into.
+-->
+
 <div *ngIf="recipes$ | async as recipes" class="card">
+  
     <div>{{recipes.length}} Results</div>
     <p-dataView #dv [value]="recipes"
                     [paginator]="true"

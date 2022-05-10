@@ -5,3 +5,7 @@ recipes-book-front
   ng serve --proxy-config proxy.config.json
 
   
+  Declarative refers to the use of declared functions to perform actions. You rely upon pure functions that can define an event flow. With RxJS, you can see this in the form of observables and operators.
+A pure function is a function that will always return identical outputs for identical inputs, no matter how many times it is called. In other words, the function will always predictably produce the same output.
+
+the declarative approach using RxJS operators and observables has many advantages, namely, the following:

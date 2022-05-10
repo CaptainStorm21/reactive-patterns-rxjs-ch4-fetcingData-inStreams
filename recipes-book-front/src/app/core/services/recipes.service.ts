@@ -28,6 +28,7 @@ export class RecipesService {
   }
 
 
+
   recipes$ = this.http.get<Recipe[]>(
     `${BASE_PATH}/recipes`);
 
@@ -42,7 +43,13 @@ export class RecipesService {
  * file because, in many cases, it depends on the
  * environment.
  *
- * 
+ *
  */
+
+  /**
+   * Here, we are declaring the recipes$ variable as the result of HTTP GET,
+   * which is either an observable or the data stream.
+   *
+   */
 
 }
