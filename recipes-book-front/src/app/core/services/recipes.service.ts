@@ -28,7 +28,13 @@ export class RecipesService {
   }
 
 
+  /**
+   * Scenario 2 - OnPush and Observables
+Let's say that now the user data is not hard-coded at the level of the user component.
+To make it a more realistic scenario, let's say that this data is available at a centralized UserService, that loads the data at startup time and makes the data available to any part of the application via dependency injection.
+   */
 
+  
   recipes$ = this.http.get<Recipe[]>(
     `${BASE_PATH}/recipes`);
 

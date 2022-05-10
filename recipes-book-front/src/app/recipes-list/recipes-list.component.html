@@ -17,8 +17,9 @@ This means there is no need to clean up any subscriptions when the component has
 So, in the template, we bind to an observable using the async pipe. Here, as recipes describes the array variable that the values are emitted into.
 -->
 
+<!--we have consumed the recipes$ observable directly in the home component using the async pipe-->
 <div *ngIf="recipes$ | async as recipes" class="card">
-  
+
     <div>{{recipes.length}} Results</div>
     <p-dataView #dv [value]="recipes"
                     [paginator]="true"
