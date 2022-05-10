@@ -1,3 +1,9 @@
+<!--
+  Step 4- displaying in html
+  we passed the recipes array to the value input of the data view component.
+  You can also use structural directives to handle this
+  [value]="recipes"
+-->
 <div *ngIf="recipes$ | async as recipes" class="card">
     <div>{{recipes.length}} Results</div>
     <p-dataView #dv [value]="recipes"
